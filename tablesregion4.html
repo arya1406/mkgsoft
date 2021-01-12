@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Region IV</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+             <!-- Sidebar - Brand -->
+             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">MKG Soft</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Informasi Umum
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-info-circle"></i>
+                    <span>Data Stasiun</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Menurut Wilayah:</h6>
+                        <a class="collapse-item" href="tablesregion1.html">Region I</a>
+                        <a class="collapse-item" href="tablesregion2.html">Region II</a>
+                        <a class="collapse-item" href="tablesregion3.html">Region III</a>
+                        <a class="collapse-item" href="tablesregion4.html">Region IV</a>
+                        <a class="collapse-item" href="tablesregion5.html">Region V</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-balance-scale-right"></i>
+                    <span>Parameter</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Menurut Bidang:</h6>
+                        <a class="collapse-item" href="bidangmeteo.html">Meteorologi</a>
+                        <a class="collapse-item" href="bidangklimat.html">Klimatologi</a>
+                        <a class="collapse-item" href="bidanggeof.html">Geofisika</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Data MKG
+            </div>
+
+            <!-- Nav Item - Ekspor -->
+            <li class="nav-item">
+                <a class="nav-link" href="exporttablesdaftardat.html">
+                    <i class="fas fa-fw fa-file-export"></i>
+                    <span>Ekspor</span></a>
+            </li>
+
+            <!-- Nav Item - Monitor -->
+            <li class="nav-item">
+                <a class="nav-link" href="tablesdaftardata.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Monitor</span></a>
+            </li>
+
+            <!-- Nav Item - Monitor -->
+            <li class="nav-item">
+                <a class="nav-link" href="reporttablesdaftardat.html">
+                    <i class="fas fa-fw fa-file-import"></i>
+                    <span>Report</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!--Heading-->
+            <div class="sidebar-heading">
+                Lainnya
+            </div>
+
+            <!--Nav Item - Pages Collapse Menu-->
+            <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAkun"
+            aria-expanded="true" aria-controls="collapseAkun">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Pengaturan Akun</span>
+            </a>
+            <div id="collapseAkun" class="collapse" aria-labelledby="headingAkun" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Login Screens:</h6>
+                <a class="collapse-item" href="login.html">Login</a>
+                <a class="collapse-item" href="register.html">Register</a>
+                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                <div class="collapse-divider"></div>
+             </div>
+            </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="developer.html">
+                    <i class="fas fa-fw fa-user-secret"></i>
+                    <span>Developer</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Selamat datang! Cari data apa?"
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                   Pusat Notifikasi
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Pusat Pesan
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="profil.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profil
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Pengaturan
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Log Aktivitas
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Wilayah Regional IV</h1>
+                    <p class="mb-4">Stasiun Meteorologi Klimatologi dan Geofisika yang berada di dalam wilayah
+                        pemantauan Regional IV, dengan pusatnya berada di Balai Besar Meteorologi, Klimatologi, dan Geofisika Wilayah IV-Makassar.
+                        Lebih lengkapnya kunjungi <a target="_blank"
+                            href="https://www.bmkg.go.id/profil/balai-besar-mkg.bmkg?id=157/">Balai Besar Wilayah 4</a>.</p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Daftar Stasiun</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Nama</th>
+                                            <th>Alamat</th>
+                                            <th>Email</th>
+                                            <th>Telepon</th>
+                                            <th>Website</th>
+                                            <th>Kepala Stasiun</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Nama</th>
+                                            <th>Alamat</th>
+                                            <th>Email</th>
+                                            <th>Telepon</th>
+                                            <th>Website</th>
+                                            <th>Kepala Stasiun</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sta. Geof. Kelas I Ambon</td>
+                                            <td>Jl. Ade Irma Suryani Nasution, No.8, Amantelu, Ambon, Maluku, 97122</td>
+                                            <td>stageof.karangpanjang@bmkg.go.id</td>
+                                            <td>0911-354931</td>
+                                            <td>-</td>
+                                            <td>SUNARDI, S.Kom</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Geof. Kelas I Manado</td>
+                                            <td>Jl. Harapan Winangun, KP.1042, Manado, Sulawesi Utara. 95001</td>
+                                            <td>stageof.winangun@bmkg.go.id</td>
+                                            <td>0431-823342</td>
+                                            <td>-</td>
+                                            <td>ABRAHAM FREDERIK MUSTAMU, S.Si, MM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Geof. Kelas II Gowa</td>
+                                            <td>Jl.Malino penggantungan sungguminasa-Gowa P.O.Box 35 sungguminasa-Gowa 92101 Sulawesi Selatan</td>
+                                            <td>stageof.gowa@bmkg.go.id</td>
+                                            <td>0411-861083</td>
+                                            <td>-</td>
+                                            <td>GANDAMANA MATONDANG, ST</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Geof. Kelas I Palu</td>
+                                            <td>Jl. Sumur Yugo, No. 4, Balarua, Palu Barat, 94226</td>
+                                            <td>stageof.palu@bmkg.go.id</td>
+                                            <td>0451-460197</td>
+                                            <td>-</td>
+                                            <td>CAHYO NUGROHO, SE, S.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Geof. Kelas III Maluku Tenggara Barat</td>
+                                            <td>Jl. Harapan Saimlaki Maluku Tenggara 97664</td>
+                                            <td>stageof.saumlaki@bmkg.go.id</td>
+                                            <td>0918-21124</td>
+                                            <td>-</td>
+                                            <td>GEORGE FRANSISCO A. MUABUAY, S.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Geof. Kelas III Ternate</td>
+                                            <td>Jl. Bali Bunga, Kel. Tabona, Ternate Selatan, Maluku Utara, 97717</td>
+                                            <td>stageof.ternate@bmkg.go.id</td>
+                                            <td>0921-3123144</td>
+                                            <td>-</td>
+                                            <td>KUSTORO HARIYATMOKO, S.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Geof. Kelas IV Kendari</td>
+                                            <td>Stasiun Klimatologi Kelas II Sicincin Padang Pariaman 25584</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>ROSA AMELIA, S.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Klim. Kelas I Maros</td>
+                                            <td>Jl. DR. Ratulangi, No.75, Panakukang, KP. No. 05, Sulawesi Selatan 90511</td>
+                                            <td>staklim.maros@bmkg.go.id</td>
+                                            <td>0411-372366</td>
+                                            <td>-</td>
+                                            <td>HARTANTO, ST, MM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Klim. Kelas II Minahasa Utara</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>JOHAN JACONIAS HAURISSA, S.Sos, M.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Klim. Kelas III Seram Bagian Barat</td>
+                                            <td>Jl. Hunitetu, Desa Kairatu, Kecamatan Kairatu, Kabupaten Seram Bagian Barat, Provinsi Maluku 97756</td>
+                                            <td>staklim.kairatu@bmkg.go.id</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>BERNADUS DANIEL S. A. K, SP, MM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas I Sultan Hasanuddin - Maros</td>
+                                            <td>Kompleks Bandara Hasanuddin, Makassar, Sulawesi Selatan 90552</td>
+                                            <td>stamet.hasanuddin@bmkg.go.id</td>
+                                            <td>(0411) 4831296</td>
+                                            <td>-</td>
+                                            <td>HARI TRIWIBOWO, S.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas II Maritim Bitung</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>DARYATNO, SP, MP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas II Maritim Paotere - Makassar</td>
+                                            <td>Jl. Sabutung I No. 30 Paotere - Makassar 90163</td>
+                                            <td>-</td>
+                                            <td>(0411) 3619242</td>
+                                            <td>-</td>
+                                            <td>IRWANSYAH NASUTION, ST, M.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas II Mutiara Sis-Al Jufri - Palu</td>
+                                            <td>Komplek Bandara Mutiara Palu Jl. Abdurahman Saleh Biroboli - Sulawesi Tengah 94114</td>
+                                            <td>stamet.mutiarapalu@bmkg.go.id</td>
+                                            <td>0451-482172</td>
+                                            <td>-</td>
+                                            <td>NUR ALIM, S.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas II Pattimura - Ambon</td>
+                                            <td>Bandara Binaka Gunung Sitoli Nias No. 101, Gunung Sitoli</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>OT ORAL SEM WILAR, SE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas II Sam Ratulangi - Manado</td>
+                                            <td>Jl. A.A Maramis, Bandara Sam Ratulangi Manado Sulawesi Utara 95374</td>
+                                            <td>stamet.samratulangi@bmkg.go.id</td>
+                                            <td>0431-811663</td>
+                                            <td>-</td>
+                                            <td>RIO MARTHADI, S.Si, MP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Amahai - Maluku Tengah</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>FRANS THOMAS LATUNY</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Andi Jemma - Luwu Utara</td>
+                                            <td>Jl. Dirgantara Masamba, Bandara Andi Jemma, Masamba, Luwu Utara, Sulawesi Selatan, 92961</td>
+                                            <td>stamet.masamba@bmkg.go.id</td>
+                                            <td>0473-21392</td>
+                                            <td>-</td>
+                                            <td>WINARNO NURDIYANTO, A.Md</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas I Sultan Babullah - Ternate</td>
+                                            <td>Bandara Babullah Ternate, Jl. Batu Agus KP. 28, Ternate, Maluku Utara, 97728</td>
+                                            <td>stamet.babullah@bmkg.go.id</td>
+                                            <td>0921-3127902</td>
+                                            <td>-</td>
+                                            <td>DJOKO SUMARDIONO, S.T</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Bandaneira - Maluku Tengah</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>ABRAHAM MANUSAMA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Beto Ambari - Bau Bau</td>
+                                            <td>Bandara Pinang Sori, Sibolga, Tapanuli Tengah, Sumatera Utara, 55264</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>FATUHRI SYABANI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Syukuran Aminudin Amir - Banggai</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>ALI MUSTOFA, SP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Karel Sadsuitubun - Maluku Tenggara</td>
+                                            <td>Jl. Bandara Udara Dumatubun Tual</td>
+                                            <td>stamet.tual@bmkg.go.id</td>
+                                            <td>0916-24025</td>
+                                            <td>-</td>
+                                            <td>RICKY ROGER HOLLE, SP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Gamar Malamo - Halmahera Utara</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>JORGEN NOCH KAWUNG, S.Sos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Geser - Seram Bagian Timur</td>
+                                            <td>Jl. Pendidikan Geser, Kelurahan Geser, Kecamatan Seram Timur, Propinsi Maluku, Kode Pos 91594</td>
+                                            <td>stamet.geser@bmkg.go.id</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>CIPTA UTAMA, S.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas I Djalaluddin - Gorontalo</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>MOHAMMAD NURHUDA, S.T.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Kasiguncu - Poso</td>
+                                            <td>Jl. Bandar Udara, No. 202, Kel. Kasiguncu, Kec. Poso Pesisir, Kab. Poso, Kab. Poso Sulawesi Tengak. 94651</td>
+                                            <td>stamet.poso@bmkg.go.id</td>
+                                            <td>0452-22835</td>
+                                            <td>-</td>
+                                            <td>MUSLIM, SP, M.Sc</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Oesman Sadik - Halmahera Selatan</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>EKO WIJAYANDI, ST</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Sultan Bantilan - Tolitoli</td>
+                                            <td>Bandar Udara Lalos, Tolo-Toli, Sulawesi Tengah, 94561</td>
+                                            <td>stamet.tolitoli@bmkg.go.id</td>
+                                            <td> 0453-23053</td>
+                                            <td>-</td>
+                                            <td>IDRIS SIMON, SP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas II Majene</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>AGUS, ST</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Naha - Kepulauan Sangihe</td>
+                                            <td>Bandara Naha Tahuna Sangihe Talaud, Kel. Naha, Kec. Tambukan Udara, Sulawsi Utara 95856</td>
+                                            <td>-</td>
+                                            <td>0432-23568</td>
+                                            <td>-</td>
+                                            <td>SUJATNO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Namlea - Buru</td>
+                                            <td>Jl. Raya Lala Namlea, Buru Utara Timur, Maluku Tengah, 97571</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>EDDY EVERT FAUTNGILYANAN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Mathilda Batyaleri - Maluku Tenggara Barat</td>
+                                            <td>Komplek Meteorologi Jl. Harapan - Saumlaki, Maluku Tenggara Barat 97664</td>
+                                            <td>stamet.saumlaki@bmkg.go.id</td>
+                                            <td>0918-21009</td>
+                                            <td>-</td>
+                                            <td>ANDI ILHAM TAHIR, ST</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Sangia Ni Bandera - Kolaka</td>
+                                            <td>Jl. Protokol No. 1 Pomalaa Kolaka, Kode Pos 93562 Sulawesi Tenggara</td>
+                                            <td>stamet.kolaka@bmkg.go.id</td>
+                                            <td>0405-2401622</td>
+                                            <td>-</td>
+                                            <td>SUTIKNO, SE, S.Si, M.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas III Emalamo - Kepulauan Sula</td>
+                                            <td>Jl. Meteor Fogi, Sanana, Maluku Utara, Kode Pos 97795</td>
+                                            <td>stamet.sanana@bmkg.go.id</td>
+                                            <td>0929-2221474</td>
+                                            <td>-</td>
+                                            <td>MOHAMAD RIVA NARUDIN, ST</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas II Maritim Kendari</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>RAMLAN, S.Si, M.Si</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sta. Met. Kelas IV Pongtiku - Tana Toraja</td>
+                                            <td>Bandara Pongtiku, Tanah Toraja</td>
+                                            <td>-</td>
+                                            <td>0432-22254</td>
+                                            <td>-</td>
+                                            <td>BURHANUDDIN, SE</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>
